@@ -6,4 +6,9 @@ module.exports = {
   // static: {
   //   enable: true,
   // }
+
+  rabbitmqjs: {
+    enable: true,
+    package: 'egg-rabbitmqjs',
+  }
 };

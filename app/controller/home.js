@@ -4,9 +4,16 @@ const Controller = require('egg').Controller;
 
 class HomeController extends Controller {
   async index() {
-    const { ctx } = this;
-    ctx.body = 'hi, egg';
+    this.ctx.body = 'hi, ' + this.app.plugins.consul.name;
   }
+
+  /** TEST: unregister consul */
+  // unregister() {
+  //   const { app, ctx } = this;
+  //   ctx.status = 200;
+  //   app.consul.agent.service.deregister('tomato-server');
+  //   app.logger.info('服务关闭解除注册');
+  // }
 
   /**
    * mock producer

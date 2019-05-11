@@ -23,6 +23,32 @@ module.exports = appInfo => {
     // myAppName: 'egg',
   };
 
+  config.consul = {
+    client: {
+      host: {
+        // register center ip , default 127.0.0.1
+        ip: 'localhost',
+        // register center port, default 8500
+        port: '8500',
+        // optional
+        defaults: {
+          // token: 'acl token'
+        }
+      },
+      server: {
+        name: 'tomato-log', // project name, default project name
+        // service ip, default extranet ip
+        // address: '', 
+        // service port, default service port
+        // port: '', 
+        check: {
+          path: '/api/ping' // health check http path
+        },
+        tags: ['log'] // service tags
+      }
+    }
+  };
+
   config.rabbitmq = {
     clients: {
       producer: {

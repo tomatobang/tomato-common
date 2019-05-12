@@ -10,4 +10,8 @@ module.exports = {
     enable: true,
     path: path.join(__dirname, '../lib/plugin/egg-consul'),
   },
+  mongoose: {
+    enable: true,
+    package: 'egg-mongoose',
+  }
 };

@@ -10,9 +10,11 @@
     "bluebird": "^3.5.4",
     "consul": "^0.34.1",
     "egg": "^2.15.1",
+    "egg-elasticsearch2": "^2.0.1",
     "egg-mongoose": "^3.1.3",
     "egg-rabbitmqjs": "^1.0.4",
-    "egg-scripts": "^2.11.0"
+    "egg-scripts": "^2.11.0",
+    "log4js": "^4.1.1"
   },
   "devDependencies": {
     "autod": "^3.0.1",

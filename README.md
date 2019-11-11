@@ -1,6 +1,6 @@
-# tomato-log
+# tomato-common
 
-log service for tomatobang
+bill module for tomatobang
 
 ## QuickStart
 

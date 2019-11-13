@@ -30,7 +30,7 @@ export default class OtherController extends Controller {
    */
   async testServerUpload() {
     const { ctx, app } = this;
-    const localFile = 'D:/rate.png';
+    const localFile = '/rate.png';
     const key = 'rate.png';
     const msg = await app['qiniu'].putFile(key, localFile);
     ctx.status = 200;

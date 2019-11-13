@@ -29,7 +29,7 @@ export default () => {
 
   config.cluster = {
     listen: {
-      port: 8001,
+      port: 8000,
     },
   };
 
@@ -42,7 +42,7 @@ export default () => {
   config.logger = {
     level: 'DEBUG',
     consoleLevel: 'INFO',
-    dir: '../app',
+    dir: './logs',
     encoding: 'utf-8',
     // 应用启动后，也能看日志( 文档中没说明, 且不建议使用 )
     // disableConsoleAfterReady: false,

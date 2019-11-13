@@ -8,17 +8,18 @@
     "typescript": true
   },
   "dependencies": {
-    "consul": "^0.36.0",
-    "egg": "^2.15.1",
-    "egg-mongoose": "^2.1.1",
-    "egg-scripts": "^2.11.0",
-    "egg-validate": "^2.0.2",
     "@grpc/proto-loader": "^0.5.3",
     "@log4js-node/logstashudp": "^1.0.0",
     "bluebird": "^3.5.4",
+    "consul": "^0.36.0",
+    "egg": "^2.15.1",
     "egg-elasticsearch2": "^2.0.1",
     "egg-grpc": "^1.0.3",
+    "egg-mongoose": "^2.1.1",
     "egg-rabbitmqjs": "^1.0.4",
+    "egg-scripts": "^2.11.0",
+    "egg-validate": "^2.0.2",
+    "jpush-sdk": "^3.5.0",
     "log4js": "^4.1.1"
   },
   "devDependencies": {
@@ -38,6 +39,8 @@
     "start": "egg-scripts start --daemon --title=tomato-common",
     "stop": "egg-scripts stop --title=tomato-common",
     "dev": "egg-bin dev",
+    "tsc": "ets && tsc -p tsconfig.json",
+    "clean": "ets clean",
     "debug": "egg-bin debug",
     "test": "npm run lint -- --fix && npm run test-local",
     "test-local": "egg-bin test",

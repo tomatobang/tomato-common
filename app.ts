@@ -5,7 +5,12 @@ const PORT = ':50051'; // RPC服务端端口
 const grpc = require('grpc');
 const protoLoader = require('@grpc/proto-loader');
 
-module.exports = app => {
+'use strict';
+
+import * as path from 'path';
+import { Application } from 'egg';
+
+export default (app: Application) => {
   /**
    * 应用启动前初始化工作
    */
@@ -45,4 +50,7 @@ module.exports = app => {
     server.start();
   });
 
+  const directory = path.join(app.config.baseDir, 'app/util');
+  app.loader.loadToApp(directory, 'util');
 };
+

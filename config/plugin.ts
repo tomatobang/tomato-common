@@ -20,6 +20,10 @@ const plugin: EggPlugin = {
     enable: false,
     package: 'egg-rabbitmqjs',
   },
+  redis: {
+    enable: true,
+    package: 'egg-redis',
+  },
   grpc: {
     enable: true,
     package: 'egg-grpc',

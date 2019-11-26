@@ -29,7 +29,7 @@ export default () => {
 
   config.cluster = {
     listen: {
-      port: 8000,
+      port: 10000,
     },
   };
 
@@ -85,12 +85,17 @@ export default () => {
   };
 
   config.mongoose = {
-    url: 'mongodb://127.0.0.1:27017/tomatobang',
+    url: 'mongodb://127.0.0.1:27017/tomato-common',
     options: {},
   };
 
-  config.serverPort = {
-    serverPort: env.serverPort || 3000,
+  config.redis = {
+    client: {
+      port: 6379,
+      host: '127.0.0.1',
+      password: '',
+      db: 0,
+    },
   };
 
   config.rabbitmq = {
